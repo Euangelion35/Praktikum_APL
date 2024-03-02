@@ -47,10 +47,10 @@ int main(){
             // Mengubah Rupiah
             case 1:
                 clearScreen();
-                cout << "- [1] KONVERSI RUPIAH --\n";
+                cout << "-- [1] KONVERSI RUPIAH --\n";
                 cout << "MASUKKAN JUMLAH RUPIAH > "; cin >> inputMoney;
                 clearScreen();
-                cout << "- [1] KONVERSI RUPIAH --\n";
+                cout << "-- [1] KONVERSI RUPIAH --\n";
                 cout << "MASUKKAN JUMLAH RUPIAH > " << inputMoney << " IDR\n";
                 dollar = convert(inputMoney, rupiahRate, dollarRate);
                 euro = convert(inputMoney, rupiahRate, euroRate);
@@ -77,10 +77,10 @@ int main(){
             // Mengubah Euro
             case 3:
                 clearScreen();
-                cout << "- [3] KONVERSI EURO --\n";
+                cout << "-- [3] KONVERSI EURO --\n";
                 cout << "MASUKKAN JUMLAH EURO > "; cin >> inputMoney;
                 clearScreen();
-                cout << "- [3] KONVERSI EURO --\n";
+                cout << "-- [3] KONVERSI EURO --\n";
                 cout << "MASUKKAN JUMLAH EURO > " << inputMoney << " EURO\n";
                 dollar = convert(inputMoney, euroRate, dollarRate);
                 rupiah = convert(inputMoney, euroRate, rupiahRate);
@@ -92,10 +92,10 @@ int main(){
             // Mengubah Yen
             case 4:
                 clearScreen();
-                cout << "- [4] KONVERSI YEN --\n";
+                cout << "-- [4] KONVERSI YEN --\n";
                 cout << "MASUKKAN JUMLAH YEN > "; cin >> inputMoney;
                 clearScreen();
-                cout << "- [4] KONVERSI YEN --\n";
+                cout << "-- [4] KONVERSI YEN --\n";
                 cout << "MASUKKAN JUMLAH YEN > " << inputMoney << " JPY\n";
                 dollar = convert(inputMoney, yenRate, dollarRate);
                 euro = convert(inputMoney, yenRate, euroRate);
