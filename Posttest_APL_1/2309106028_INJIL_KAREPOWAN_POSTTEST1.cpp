@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip> // Untuk membatasi angka di belakang koma
 #include <cctype> // library pembanding tipe data
 
 using namespace std;
@@ -55,9 +56,9 @@ int main(){
                 dollar = convert(inputMoney, rupiahRate, dollarRate);
                 euro = convert(inputMoney, rupiahRate, euroRate);
                 yen = convert(inputMoney, rupiahRate, yenRate);
-                cout << "HASIL DALAM DOLLLAR : " << dollar << " USD" << endl;
-                cout << "HASIL DALAM EURO : " << euro << " EURO" << endl;
-                cout << "HASIL DALAM YEN : " << yen << " JPY" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM DOLLLAR : " << dollar << " USD" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM EURO : " << euro << " EURO" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM YEN : " << yen << " JPY" << endl;
                 break;
             // Mengubah Dollar
             case 2:
@@ -70,9 +71,9 @@ int main(){
                 rupiah = convert(inputMoney, dollarRate, rupiahRate);
                 euro = convert(inputMoney, dollarRate, euroRate);
                 yen = convert(inputMoney, dollarRate, yenRate);
-                cout << "HASIL DALAM RUPIAH : " << rupiah << " IDR" << endl;
-                cout << "HASIL DALAM EURO : " << euro << " EURO" << endl;
-                cout << "HASIL DALAM YEN : " << yen << " JPY" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM RUPIAH : " << rupiah << " IDR" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM EURO : " << euro << " EURO" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM YEN : " << yen << " JPY" << endl;
                 break;
             // Mengubah Euro
             case 3:
@@ -85,9 +86,9 @@ int main(){
                 dollar = convert(inputMoney, euroRate, dollarRate);
                 rupiah = convert(inputMoney, euroRate, rupiahRate);
                 yen = convert(inputMoney, euroRate, yenRate);
-                cout << "HASIL DALAM DOLLAR : " << dollar << " USD" << endl;
-                cout << "HASIL DALAM RUPIAH : " << rupiah << " IDR" << endl;
-                cout << "HASIL DALAM YEN : " << yen << " JPY" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM DOLLAR : " << dollar << " USD" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM RUPIAH : " << rupiah << " IDR" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM YEN : " << yen << " JPY" << endl;
                 break;
             // Mengubah Yen
             case 4:
@@ -100,9 +101,9 @@ int main(){
                 dollar = convert(inputMoney, yenRate, dollarRate);
                 euro = convert(inputMoney, yenRate, euroRate);
                 rupiah = convert(inputMoney, yenRate, rupiahRate);
-                cout << "HASIL DALAM DOLLAR : " << dollar << " USD" << endl;
-                cout << "HASIL DALAM EURO : " << yen << " EURO" << endl;
-                cout << "HASIL DALAM RUPIAH : " << rupiah << " IDR" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM DOLLAR : " << dollar << " USD" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM EURO : " << yen << " EURO" << endl;
+                cout << fixed << setprecision(2) << "HASIL DALAM RUPIAH : " << rupiah << " IDR" << endl;
                 break;
             // Keluar dari program
             case 5:
@@ -121,7 +122,7 @@ int main(){
                 retry = false;
                 clearScreen();
                 cout << "PROGRAM BERHENTI";
-                break;
+                return 0;
             }
         }
     } while (retry == true);
